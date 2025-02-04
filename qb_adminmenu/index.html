@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="adminMenu">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>Admin Menu</h1>
+            <button class="tab-button active" onclick="openTab('players')">👤 Players</button>
+            <button class="tab-button" onclick="openTab('vehicles')">🚗 Vehicles</button>
+            <button class="tab-button" onclick="openTab('teleport')">📍 Teleport</button>
+            <button class="tab-button" onclick="openTab('server')">⚙️ Server</button>
+            <button class="tab-button" onclick="openTab('gangs')">💀 Gangs</button>
+            <button class="tab-button" onclick="openTab('fun')">🎉 Fun</button>
+            <button class="close-button" onclick="closeMenu()">❌ Close</button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Player Management -->
+            <div class="tab-content" id="players">
+                <h2>Player Management</h2>
+                <button onclick="kickPlayer()">Kick Player</button>
+                <button onclick="banPlayer()">Ban Player</button>
+                <button onclick="freezePlayer()">Freeze Player</button>
+                <button onclick="revivePlayer()">Revive Player</button>
+                <button onclick="spectatePlayer()">Spectate Player</button>
+                <button onclick="setJob()">Set Job</button>
+                <button onclick="jailPlayer()">Jail Player</button>
+            </div>
+
+            <!-- Vehicle Management -->
+            <div class="tab-content" id="vehicles" style="display: none;">
+                <h2>Vehicle Management</h2>
+                <button onclick="repairVehicle()">Repair Vehicle</button>
+                <button onclick="deleteVehicle()">Delete Vehicle</button>
+                <button onclick="flipVehicle()">Flip Vehicle</button>
+                <button onclick="spawnVehicle()">Spawn Vehicle</button>
+            </div>
+
+            <!-- Teleport -->
+            <div class="tab-content" id="teleport" style="display: none;">
+                <h2>Teleport Options</h2>
+                <button onclick="tpToPlayer()">Teleport to Player</button>
+                <button onclick="bringPlayer()">Bring Player</button>
+                <button onclick="tpToWaypoint()">Teleport to Waypoint</button>
+            </div>
+
+            <!-- Server -->
+            <div class="tab-content" id="server" style="display: none;">
+                <h2>Server Management</h2>
+                <button onclick="announceMessage()">Send Announcement</button>
+                <button onclick="restartServer()">Restart Server</button>
+                <button onclick="changeWeather()">Change Weather</button>
+                <button onclick="setTime()">Set Time</button>
+            </div>
+
+            <!-- Gang Management -->
+            <div class="tab-content" id="gangs" style="display: none;">
+                <h2>Gang Management</h2>
+                <button onclick="createGang()">Create Gang</button>
+                <button onclick="addGangMember()">Add Member</button>
+                <button onclick="removeGangMember()">Remove Member</button>
+                <button onclick="setGangRank()">Change Rank</button>
+            </div>
+
+            <!-- Fun -->
+            <div class="tab-content" id="fun" style="display: none;">
+                <h2>Fun Options</h2>
+                <button onclick="explodePlayer()">Explode Player</button>
+                <button onclick="attachProp()">Attach Prop</button>
+                <button onclick="makePlayerDance()">Make Player Dance</button>
+                <button onclick="spawnFireworks()">Fireworks</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

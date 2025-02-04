@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="adminMenu">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>Admin Menu</h1>
+            <button class="tab-button active" data-tab="players" onclick="openTab('players')">👤 Players</button>
+            <button class="tab-button" data-tab="vehicles" onclick="openTab('vehicles')">🚗 Vehicles</button>
+            <button class="tab-button" data-tab="teleport" onclick="openTab('teleport')">📍 Teleport</button>
+            <button class="tab-button" data-tab="server" onclick="openTab('server')">⚙️ Server</button>
+            <button class="tab-button" data-tab="gangs" onclick="openTab('gangs')">💀 Gangs</button>
+            <button class="tab-button" data-tab="fun" onclick="openTab('fun')">🎉 Fun</button>
+            <button class="tab-button" data-tab="devtools" onclick="openTab('devtools')">🛠 Dev Tools</button>
+            <button class="tab-button" data-tab="status" onclick="openTab('status')">📊 Status</button>
+            <button class="close-button" onclick="closeMenu()">❌ Close</button>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Player Management -->
+            <div class="tab-content" id="players" style="display: flex;">
+                <h2>Player Management</h2>
+                <div class="button-grid">
+                    <button id="kickButton" onclick="kickPlayer()">Kick</button>
+                    <button id="banButton" onclick="banPlayer()">Ban</button>
+                    <button id="freezeButton" onclick="freezePlayer()">Freeze</button>
+                    <button id="reviveButton" onclick="revivePlayer()">Revive</button>
+                    <button id="setJobButton" onclick="setJob()">Set Job</button>
+                    <button id="setHealthButton" onclick="setHealth()">Set Health</button>
+                    <button id="setArmorButton" onclick="setArmor()">Set Armor</button>
+                    <button id="toggleGodModeButton" onclick="toggleGodMode()">God Mode</button>
+                    <button id="giveItemButton" onclick="giveItem()">Give Item</button>
+                    <button id="jailButton" onclick="jailPlayer()">Jail</button>
+                    <button id="muteButton" onclick="mutePlayer()">Mute</button>
+                    <button id="unmuteButton" onclick="unmutePlayer()">Unmute</button>
+                    <button id="teleportButton" onclick="teleportToPlayer()">Teleport</button>
+                    <button id="setPlayerMoneyButton" onclick="setPlayerMoney()">Set Money</button>
+                    <button id="setPlayerCoordsButton" onclick="setPlayerCoords()">Set Coords</button>
+                </div>
+            </div>
+
+            <!-- Vehicle Management -->
+            <div class="tab-content" id="vehicles" style="display: none;">
+                <h2>Vehicle Management</h2>
+                <div class="button-grid">
+                    <button id="repairVehicleButton" onclick="repairVehicle()">Repair</button>
+                    <button id="deleteVehicleButton" onclick="deleteVehicle()">Delete</button>
+                    <button id="flipVehicleButton" onclick="flipVehicle()">Flip</button>
+                    <button id="spawnVehicleButton" onclick="spawnVehicle()">Spawn</button>
+                    <button id="changeColorButton" onclick="changeColor()">Change Color</button>
+                    <button id="modifyVehicleButton" onclick="modifyVehicle()">Modify</button>
+                </div>
+            </div>
+
+            <!-- Teleport Options -->
+            <div class="tab-content" id="teleport" style="display: none;">
+                <h2>Teleport Options</h2>
+                <div class="button-grid">
+                    <button id="tpToPlayerButton" onclick="tpToPlayer()">To Player</button>
+                    <button id="bringPlayerButton" onclick="bringPlayer()">Bring Player</button>
+                    <button id="tpToWaypointButton" onclick=" tpToWaypoint()">To Waypoint</button>
+                    <button id="tpToCoordsButton" onclick="teleportToCoords()">To Coordinates</button>
+                </div>
+            </div>
+
+            <!-- Server Management -->
+            <div class="tab-content" id="server" style="display: none;">
+                <h2>Server Management</h2>
+                <div class="button-grid">
+                    <button id="restartServerButton" onclick="restartServer()">Restart Server</button>
+                    <button id="shutdownServerButton" onclick="shutdownServer()">Shutdown Server</button>
+                </div>
+            </div>
+
+            <!-- Gang Operations -->
+            <div class="tab-content" id="gangs" style="display: none;">
+                <h2>Gang Operations</h2>
+                <div class="button-grid">
+                    <button id="createGangButton" onclick="createGang()">Create Gang</button>
+                    <button id="deleteGangButton" onclick="deleteGang()">Delete Gang</button>
+                </div>
+            </div>
+
+            <!-- Fun Activities -->
+            <div class="tab-content" id="fun" style="display: none;">
+                <h2>Fun Activities</h2>
+                <div class="button-grid">
+                    <button id="spawnPetButton" onclick="spawnPet()">Spawn Pet</button>
+                </div>
+            </div>
+
+            <!-- Developer Tools -->
+            <div class="tab-content" id="devtools" style="display: none;">
+                <h2>Developer Tools</h2>
+                <div class="button-grid">
+                    <button id="logMessageButton" onclick="logMessage()">Log Message</button>
+                </div>
+            </div>
+
+            <!-- Status Check -->
+            <div class="tab-content" id="status" style="display: none;">
+                <h2>Status Check</h2>
+                <div class="button-grid">
+                    <button id="checkPlayerStatusButton" onclick="checkPlayerStatus()">Check Player Status</button>
+                    <button id="checkServerStatusButton" onclick="checkServerStatus()">Check Server Status</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

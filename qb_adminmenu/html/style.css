@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e2f; /* Dark background for the body */
+    color: #ffffff; /* White text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Admin Menu Container */
+#adminMenu {
+    display: flex;
+    height: 100vh;
+    background-color: rgba(30, 30, 47, 0.95); /* Semi-transparent dark background */
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: rgba(42, 42, 59, 0.9); /* Semi-transparent sidebar background */
+    color: white;
+    width: 250px;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    border-right: 5px solid pink; /* Pink outline on the right */
+}
+
+/* Sidebar Header */
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tab Button Styles */
+.tab-button {
+    background-color: #3b3b4f; /* Dark button background */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.tab-button:hover {
+    background-color: #4a4a6a; /* Lighter on hover */
+}
+
+.tab-button.active {
+    background-color: #1abc9c; /* Active button color */
+}
+
+/* Close Button */
+.close-button {
+    background-color: #e74c3c; /* Red close button */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Added margin to push the close button down */
+}
+
+.close-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Content Styles */
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: flex; /* Show active tab content */
+    flex-direction: column; /* Stack content vertically */
+}
+
+.tab-content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1abc9c; /* Green underline */
+    padding-bottom: 10px;
+}
+
+/* Button Grid */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Button Styles in Content */
+button {
+    background-color: #3498db; /* Blue button background */
+    color: white;
+    border: none;
+    padding: 10px; /* Smaller padding */
+    cursor: pointer;
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 14px; /* Smaller font size */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #adminMenu {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
